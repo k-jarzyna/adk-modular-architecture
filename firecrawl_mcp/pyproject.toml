@@ -1,0 +1,35 @@
+[project]
+name = "firecrawl-mcp"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Konrad Jarzyna",email = "konrad.jarzyna0@gmail.com"}
+]
+readme = "README.md"
+requires-python = "^3.13"
+dependencies = [
+    "fastmcp (>=2.3.4,<3.0.0)",
+    "python-dotenv (>=1.0.0,<2.0.0)",
+    "firecrawl (>=2.5.4,<3.0.0)",
+    "mcp[cli] (>=1.8.1,<2.0.0)",
+    "pydantic (>=2.11.4,<3.0.0)",
+    "pydantic-settings (>=2.0.0,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[[tool.poetry.packages]]
+include = "src"
+
+[tool.poetry.scripts]
+start-mcp = "cli:start_mcp"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.3.7"
+black = "^25.1.0"
+isort = "^6.0.1"
+
