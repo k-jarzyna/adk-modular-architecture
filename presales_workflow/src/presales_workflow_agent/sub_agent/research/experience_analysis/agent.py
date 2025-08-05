@@ -8,8 +8,7 @@ from src.shared.tool.get_artifact import get_existing_artifact
 from src.shared.tool.save_artifact import save_artifact
 
 
-async def create_company_experience_analysis_agent() -> Agent:
-    return Agent(
+company_experience_analysis_agent = Agent(
         name="company_experience_analysis_agent",
         model=GENERIC_MODEL,
         description="Agent providing search capabilities for previous company experience with specified business domain, technology or client.",

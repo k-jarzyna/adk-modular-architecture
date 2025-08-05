@@ -8,11 +8,10 @@ from src.shared.tool.get_artifact import get_existing_artifact
 from src.shared.tool.save_artifact import save_artifact
 
 
-async def create_internal_presales_summary_agent() -> Agent:
-    return Agent(
-        model=GENERIC_MODEL,
-        name="internal_presales_summary_agent",
-        description="Agent creating an internal summary of the entire presales process for company use",
-        instruction=INTERNAL_SUMMARY_PROMPT,
-        tools=[get_existing_artifact, save_artifact, knowledge_base_remote_agent_tool],
-    )
+internal_presales_summary_agent = Agent(
+    model=GENERIC_MODEL,
+    name="internal_presales_summary_agent",
+    description="Agent creating an internal summary of the entire presales process for company use",
+    instruction=INTERNAL_SUMMARY_PROMPT,
+    tools=[get_existing_artifact, save_artifact, knowledge_base_remote_agent_tool],
+)

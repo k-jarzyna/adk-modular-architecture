@@ -12,10 +12,5 @@ def start_api():
 def start_dev():
     os.environ["PYTHONPATH"] = "."
     subprocess.run([
-        "watchmedo", "auto-restart",
-        "--directory=.",
-        "--pattern=*.py",
-        "--recursive",
-        "--",
-        "adk", "web", "src"
+        "adk", "web", "src", "--reload_agents"
     ], check=True)

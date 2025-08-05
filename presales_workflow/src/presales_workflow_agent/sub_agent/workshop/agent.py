@@ -18,8 +18,7 @@ from src.presales_workflow_agent.sub_agent.workshop.solution_architect_agent imp
     solution_architect_agent
 
 
-async def create_workshop_manager_agent():
-    technical_agents = ParallelAgent(
+technical_agents = ParallelAgent(
         name="technical_agents",
         description="Group of technical agents working in parallel",
         sub_agents=[
@@ -33,8 +32,8 @@ async def create_workshop_manager_agent():
         ],
     )
 
-    return SequentialAgent(
-        name="workshop_manager_agent",
-        description="Agent managing workshop stage workflow in sequence",
-        sub_agents=[technical_agents, solution_architect_agent],
-    )
+workshop_manager_agent = SequentialAgent(
+    name="workshop_manager_agent",
+    description="Agent managing workshop stage workflow in sequence",
+    sub_agents=[technical_agents, solution_architect_agent],
+)

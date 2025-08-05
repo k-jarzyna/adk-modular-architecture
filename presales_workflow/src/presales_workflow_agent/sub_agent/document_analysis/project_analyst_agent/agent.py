@@ -11,5 +11,5 @@ project_analyst_agent = Agent(
     name="project_analyst_agent",
     description="Project analyst agent that summarizes project information based on presales document.",
     instruction=PROJECT_ANALYST_PROMPT,
-    tools=[save_artifact, get_existing_artifact],
+    tools=[get_existing_artifact, save_artifact],
 )

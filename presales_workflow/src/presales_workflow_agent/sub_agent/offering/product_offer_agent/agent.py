@@ -8,11 +8,10 @@ from src.shared.tool.get_artifact import get_existing_artifact
 from src.shared.tool.save_artifact import save_artifact
 
 
-async def create_product_offer_agent() -> Agent:
-    return Agent(
-        model=GENERIC_MODEL,
-        name="product_offer_agent",
-        description="Agent generating a complete product offer for the client",
-        instruction=PRODUCT_OFFER_PROMPT,
-        tools=[save_artifact, get_existing_artifact, knowledge_base_remote_agent_tool],
-    )
+product_offer_agent = Agent(
+    model=GENERIC_MODEL,
+    name="product_offer_agent",
+    description="Agent generating a complete product offer for the client",
+    instruction=PRODUCT_OFFER_PROMPT,
+    tools=[save_artifact, get_existing_artifact, knowledge_base_remote_agent_tool],
+)

@@ -1,0 +1,26 @@
+{
+  "capabilities": {},
+  "defaultInputModes": [
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "text/plain"
+  ],
+  "description": "A knowledge base agent that can be used to answer questions about the software company experience and previous projects.",
+  "name": "knowledge_base_agent",
+  "protocolVersion": "0.2.6",
+  "skills": [
+    {
+      "description": "Search company knowledge base.",
+      "id": "knowledge_base_agent-search",
+      "name": "search",
+      "tags": [
+        "company_knowledge",
+        "knowledge_base"
+      ]
+    }
+  ],
+  "supportsAuthenticatedExtendedCard": false,
+  "url": "http://localhost:6000",
+  "version": "0.0.1"
+}

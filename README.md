@@ -67,7 +67,7 @@ This project assumes familiarity with several advanced AI concepts and emerging 
 * **Retrieval-Augmented Generation (RAG)** - Techniques for enhancing LLM outputs with retrieved information
 * **Large Language Model (LLM) Tools** - The use of tools by LLMs to extend their capabilities into the real world
 * **Hierarchical Agent Networks** - Structures for organizing agents in supervisory relationships
-* **Multi-modal Agent Systems** - Agents that can process and generate multiple types of data (text, images, etc.)
+* **Multi-modal Agent Systems** - Agents that can process and generate multiple types of data (text, files, etc.)
 
 ![System Architecture Overview](.docs/Presales.jpg)
 
@@ -367,9 +367,7 @@ After implementing and thoroughly testing this modular agent architecture using 
 
 3. **Development Tooling**: Debugging capabilities are limited, making it challenging to troubleshoot complex agent interactions, especially when tools fail or return unexpected results.
 
-4. **Production Monitoring**: The framework lacks built-in observability features necessary for production monitoring, requiring custom implementation of logging, metrics, and tracing.
-
-5. **Limited Long-Running Task Support**: The current task manager is memory-resident, which introduces reliability and scalability concerns for long-running processes. A more robust implementation with persistence and state management would be necessary for production scenarios.
+4. **Limited Long-Running Task Support**: The current task manager is memory-resident, which introduces reliability and scalability concerns for long-running processes. A more robust implementation with persistence and state management would be necessary for production scenarios.
 
 #### Recommendations for Production Deployment
 
